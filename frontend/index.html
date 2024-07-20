@@ -9,26 +9,62 @@
 <body>
     
     <div class="container text-center">
-        <h1>Todo Tasks</h1>
-        <div
-            class="table-responsive"
-        >
-            <table
-                class="table table-primary"
+        <div class="container">
+            <h1>Todo Tasks</h1>
+            <div
+                class="table-responsive"
             >
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Descrption</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <!-- Added in man.js -->
-                </tbody>
-            </table>
+                <table
+                    class="table table-primary"
+                >
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Descrption</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Added in man.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+        <div class="container">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Task</button>
+        </div>  
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="container-xl">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add New Task</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                        <div class="mb-3">
+                            <label for="taskName" class="form-label">Task Name</label>
+                            <input required type="text" class="form-control" id="taskName" aria-describedby="nameHelp">
+                            <div id="nameHelp" class="form-text">The name is required</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="taskDescription" class="form-label">Task Description</label>
+                            <input type="text" class="form-control" id="taskDescription">
+                        </div>
+ 
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="btnSubmitTask" data-bs-dismiss="modal">Submit</button>
+                </div>
+            </form>
         </div>
-        
     </div>
 
     <script src="main.js"></script>
