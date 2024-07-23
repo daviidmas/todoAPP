@@ -53,8 +53,8 @@ namespace todoAPI.Controllers
             var product = await _dbContext.Tasks.FindAsync(todoTask.Id);
             if (product == null)
                 return NotFound();
-            todoTask.Name = todoTask.Name;
-            todoTask.Description = todoTask.Description;
+            product.Name = todoTask.Name;
+            product.Description = todoTask.Description;
             await _dbContext.SaveChangesAsync();
             return Ok();
         }

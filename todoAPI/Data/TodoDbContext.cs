@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using todoAPI.Entities;
 
 namespace todoAPI.Data
 {
-    public class TodoDbContext : DbContext
+    public class TodoDbContext : IdentityDbContext
     {
         private readonly IConfiguration configuration;
 
