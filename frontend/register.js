@@ -7,14 +7,13 @@ registerBtn.addEventListener("click", async (e) => {
     
     let email = document.getElementById('inputEmailRegister').value
     let password = document.getElementById('inputPasswordRegister').value
-
-    console.log(email)
-    console.log(password)
     
     let res = await fetch(registerURL, {
         method: "POST",
+        credentiasl: "include",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept' : 'application/json'
         },
         body : JSON.stringify({
             email: email,

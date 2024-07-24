@@ -9,13 +9,13 @@ loginBtn.addEventListener("click", async (e) => {
     let email = document.getElementById('inputEmailLogin').value
     let password = document.getElementById('inputPasswordLogin').value
 
-    console.log(email)
-    console.log(password)
 
     let res = await fetch(loginURL, {
         method: "POST",
+        credentiasl: "include",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept' : 'application/json'
         },
         body : JSON.stringify({
             email: email,
